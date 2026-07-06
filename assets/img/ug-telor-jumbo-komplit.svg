@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7A5439"/>
+      <stop offset="1" stop-color="#2A180F"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" fill="url(#g)"/>
+  <circle cx="499.20000000000005" cy="105.6" r="134.4" fill="#ffffff" opacity="0.08"/>
+  <circle cx="96.0" cy="408.0" r="105.6" fill="#000000" opacity="0.08"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+        font-family="Georgia, serif" font-size="43.199999999999996" fill="#FFFCF6" opacity="0.95">Telor Jumbo Komplit</text>
+  <text x="50%" y="62%" dominant-baseline="middle" text-anchor="middle"
+        font-family="monospace" font-size="21.599999999999998" fill="#FFFCF6" opacity="0.75">letakkan foto asli di sini</text>
+</svg>

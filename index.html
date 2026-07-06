@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Martabak Manja — Martabak Manis & Martabak Telor kekinian, gurih dan legit dalam setiap gigitan." />
+    <title>Martabak Manja | Manis & Gurih, Dalam Satu Gigitan</title>
+
+    <!-- Google Fonts: Fraunces (display), Plus Jakarta Sans (body), Space Mono (menu/price) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap (grid & base component classes only — no Bootstrap JS needed) -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Design tokens & semua gaya komponen -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ============================ NAVBAR ============================ -->
+    <nav class="navbar navbar-expand-lg mm-navbar sticky-top">
+      <div class="container">
+        <a class="navbar-brand mm-brand" href="#beranda">
+          <span class="mm-brand-mark" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+              <path d="M15 2 L28 15 L15 28 L2 15 Z" fill="var(--gold-400)" />
+              <path d="M15 8 L22 15 L15 22 L8 15 Z" fill="var(--cocoa-900)" />
+            </svg>
+          </span>
+          Martabak <span class="mm-brand-accent">Manja</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          id="mmNavToggler"
+          aria-controls="mmNavContent"
+          aria-expanded="false"
+          aria-label="Buka menu navigasi"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mmNavContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-2">
+            <li class="nav-item"><a class="nav-link mm-nav-link" href="#beranda">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link mm-nav-link" href="#produk">Menu / Produk</a></li>
+            <li class="nav-item"><a class="nav-link mm-nav-link" href="#transaksi">Cara Transaksi</a></li>
+            <li class="nav-item"><a class="nav-link mm-nav-link" href="#kontak">Kontak</a></li>
+          </ul>
+
+          <button class="btn mm-cart-btn" id="mmCartOpenBtn" aria-label="Buka keranjang belanja">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M3 3h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L20 8H6"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="9" cy="20" r="1.4" fill="currentColor" />
+              <circle cx="17" cy="20" r="1.4" fill="currentColor" />
+            </svg>
+            Keranjang
+            <span class="mm-cart-count" id="mmCartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ============================ HERO ============================ -->
+      <header id="beranda" class="mm-hero">
+        <div class="container">
+          <div class="row align-items-center gy-5">
+            <div class="col-lg-6">
+              <span class="eyebrow">Sejak Griddle Pertama Menyala</span>
+              <h1 class="mm-hero-title">
+                Manis &amp; Gurih,
+                <br />
+                Dalam <span class="mm-hero-highlight">Satu Gigitan.</span>
+              </h1>
+              <p class="mm-hero-lead">
+                Martabak Manja menghadirkan Martabak Manis lumer dan Martabak Telor renyah,
+                dipanggang di atas wajan panas dengan resep turun-temurun. Pesan online,
+                bayar pakai QRIS, tinggal duduk manis menunggu jemputan kurir.
+              </p>
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <a href="#produk" class="btn-brand">Lihat Menu</a>
+                <a href="#transaksi" class="btn-outline-brand">Cara Pesan</a>
+              </div>
+
+              <div class="mm-hero-stats d-flex flex-wrap gap-4 mt-5">
+                <div>
+                  <div class="mm-stat-number">12+</div>
+                  <div class="mm-stat-label">Varian Rasa</div>
+                </div>
+                <div>
+                  <div class="mm-stat-number">4.9★</div>
+                  <div class="mm-stat-label">Rating Pelanggan</div>
+                </div>
+                <div>
+                  <div class="mm-stat-number">100%</div>
+                  <div class="mm-stat-label">Panggang Segar</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="mm-hero-frame">
+                <img src="assets/img/slide1.jpg" alt="Martabak Manis dan Martabak Telor Martabak Manja" />
+                <span class="mm-hero-tag">🔥 Baru Matang</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="crimp-divider to-cream" aria-hidden="true"></div>
+      </header>
+
+      <!-- ============================ VIDEO ============================ -->
+      <section class="mm-video-section section-sm">
+        <div class="container">
+          <div class="text-center mb-4">
+            <span class="eyebrow justify-content-center">Behind The Griddle</span>
+            <h2 class="section-title">Proses Manja, Dari Adonan ke Meja</h2>
+            <p class="section-lead mx-auto">
+              Tonton keseruan dapur Martabak Manja selama 45 detik — mulai dari menuang adonan,
+              memanggang di atas api sedang, hingga siap dikemas hangat untuk Anda.
+            </p>
+          </div>
+
+          <div class="mm-video-wrap">
+            <div class="mm-video-frame" id="mmVideoFrameWrap" style="width: 960px; max-width: 100%; height: 300px;">
+              <video
+                id="mmPromoVideo"
+                class="mm-video-el"
+                poster="assets/img/"
+                preload="metadata"
+                playsinline
+              >
+                <source src="assets/vid/martabak1.mp4" type="video/mp4" />
+                Browser Anda tidak mendukung tag video.
+              </video>
+
+              <button class="mm-video-play" id="mmVideoPlayBtn" aria-label="Putar video profil Martabak Manja">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                  <path d="M8 5v14l11-7z" fill="var(--cocoa-900)" />
+                </svg>
+              </button>
+
+              <span class="mm-video-duration">00:45</span>
+            </div>
+          </div>
+          <p class="mm-video-note text-center">
+           
+          </p>
+        </div>
+      </section>
+
+      <div id="produk">
+        <!-- ============================ BEST SELLER ============================ -->
+        <section id="best-seller" class="section">
+          <div class="container">
+            <div class="row mb-5">
+              <div class="col-lg-7">
+                <span class="eyebrow">Paling Dicari</span>
+                <h2 class="section-title">Produk Terlaris / Best Seller</h2>
+                <p class="section-lead">
+                  Rasa-rasa martabak manis yang paling sering dipesan pelanggan setia Martabak Manja.
+                </p>
+              </div>
+            </div>
+
+            <div class="row g-4" id="mmBestSellerGrid"></div>
+          </div>
+        </section>
+
+        <!-- ============================ UNGGULAN ============================ -->
+        <section id="unggulan" class="section mm-bg-paper">
+          <div class="container">
+            <div class="row mb-5">
+              <div class="col-lg-7">
+                <span class="eyebrow">Rekomendasi Kami</span>
+                <h2 class="section-title">Produk Unggulan</h2>
+                <p class="section-lead">
+                  Martabak telor gurih dengan isian premium, pilihan terbaik untuk makan besar bersama keluarga.
+                </p>
+              </div>
+            </div>
+
+            <div class="row g-4" id="mmUnggulanGrid"></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ============================ TRANSAKSI ============================ -->
+      <section id="transaksi" class="section mm-transaction">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <span class="eyebrow">Gampang & Cepat</span>
+              <h2 class="section-title">Cara Bertransaksi dengan QRIS</h2>
+              <p class="section-lead">
+                Pastikan produk sudah masuk ke keranjang terlebih dahulu sebelum melanjutkan
+                ke pembayaran. Ikuti empat langkah sederhana berikut.
+              </p>
+            </div>
+          </div>
+
+          <div class="row g-4 mt-2">
+            <div class="col-sm-6 col-lg-3">
+              <div class="mm-step-card">
+                <span class="mm-step-no">01</span>
+                <h3 class="mm-step-title">Pilih Martabak Favorit</h3>
+                <p class="mm-step-desc">
+                  Jelajahi menu Best Seller atau Unggulan, lalu tekan tombol "+ Keranjang" pada produk yang diinginkan.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="mm-step-card">
+                <span class="mm-step-no">02</span>
+                <h3 class="mm-step-title">Cek Keranjang Belanja</h3>
+                <p class="mm-step-desc">
+                  Buka ikon Keranjang di navigasi untuk memastikan pesanan dan jumlahnya sudah sesuai sebelum lanjut.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="mm-step-card">
+                <span class="mm-step-no">03</span>
+                <h3 class="mm-step-title">Scan Kode QRIS</h3>
+                <p class="mm-step-desc">
+                  Pada halaman checkout, pindai kode QRIS menggunakan aplikasi e-wallet atau mobile banking apa saja.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="mm-step-card">
+                <span class="mm-step-no">04</span>
+                <h3 class="mm-step-title">Bayar & Konfirmasi</h3>
+                <p class="mm-step-desc">
+                  Selesaikan pembayaran, lalu kirim bukti transfer ke admin melalui WhatsApp untuk diproses.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mm-transaction-cta">
+            <div>
+              <p class="mb-1 fw-semibold" id="mmTransactionCtaTitle">Keranjang masih kosong.</p>
+              <p class="mm-transaction-hint" id="mmTransactionCtaHint">
+                Tambahkan minimal satu produk ke keranjang untuk membuka pembayaran QRIS.
+              </p>
+            </div>
+            <div class="d-flex gap-3 flex-wrap">
+              <button class="btn-outline-brand" id="mmCartOpenBtn2" onclick="document.getElementById('mmCartOpenBtn').click()">
+                Buka Keranjang
+              </button>
+              <button class="btn-brand" id="mmPayQrisBtn" disabled style="opacity: 0.45; cursor: not-allowed;">
+                Bayar dengan QRIS
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ MAPS / KONTAK ============================ -->
+      <section id="kontak" class="section mm-bg-paper">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-5">
+              <span class="eyebrow">Kunjungi Kami</span>
+              <h2 class="section-title">Lokasi Gerai Martabak Manja</h2>
+              <p class="section-lead">
+                Datang langsung untuk merasakan aroma martabak fresh from the griddle,
+                atau pesan online dan biarkan kurir kami yang mengantar.
+              </p>
+
+              <ul class="mm-contact-list">
+                <li><strong>Alamat:</strong> Jl. Kuliner Legit No. 45, Semarang, Jawa Tengah</li>
+                <li><strong>Jam Operasional:</strong> Setiap hari, 15.00 – 23.00 WIB</li>
+                <li><strong>Telepon / WhatsApp:</strong> 0812-3456-7890</li>
+              </ul>
+
+              <a
+                href="https://www.google.com/maps"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-outline-brand"
+              >
+                Buka di Google Maps
+              </a>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="mm-map-frame">
+                <iframe
+                  title="Lokasi Martabak Manja"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.106163165118!2d109.68300167475658!3d-6.8778827931208895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e702541f7b09717%3A0x50848912653f7a2f!2sRANCA&#39;%20HIJAB%20SYAR&#39;I!5e0!3m2!1sen!2sid!4v1783335278839!5m2!1sen!2sid"
+                  width="100%"
+                  height="380"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ SOSIAL / YOUTUBE ============================ -->
+      <section class="section mm-social-section">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+              <span class="eyebrow" style="color: var(--gold-400)">Tonton &amp; Ikuti</span>
+              <h2 class="section-title" style="color: var(--paper)">
+                Cerita Dapur, Update Menu, dan Promo Spesial
+              </h2>
+              <p class="section-lead" style="color: rgba(255,252,246,0.72)">
+                Pantau video di kanal YouTube kami dan ikuti media sosial untuk promo,
+                menu musiman, serta behind-the-scenes proses pembuatan martabak.
+              </p>
+
+              <div class="mm-social-icons">
+                <a
+                  href="https://instagram.com/martabakmanja"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mm-social-icon"
+                  style="--icon-color: #E1306C"
+                  aria-label="Kunjungi Instagram Martabak Manja"
+                >
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8" />
+                    <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" />
+                    <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" />
+                  </svg>
+                  <span>Instagram</span>
+                </a>
+                <a
+                  href="https://tiktok.com/@martabakmanja"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mm-social-icon"
+                  style="--icon-color: #111111"
+                  aria-label="Kunjungi TikTok Martabak Manja"
+                >
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M16 3c.4 2.2 2 3.7 4 3.9V10c-1.5 0-2.9-.4-4-1.2v6.3a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3a2.6 2.6 0 1 0 1.9 2.5V3h2.8z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span>TikTok</span>
+                </a>
+                <a
+                  href="https://facebook.com/martabakmanja"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mm-social-icon"
+                  style="--icon-color: #1877F2"
+                  aria-label="Kunjungi Facebook Martabak Manja"
+                >
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M14 9h2.5V6H14c-1.9 0-3.5 1.6-3.5 3.5V11H8v3h2.5v6H13v-6h2.4l.6-3H13V9.6c0-.3.3-.6.6-.6H14z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <!-- Ganti VIDEO_ID_ANDA dengan ID video YouTube asli Martabak Manja -->
+              <div class="mm-youtube-frame">
+                <iframe
+                  width="100%"
+                  height="320"
+                  src="https://www.youtube.com/embed/mOZYTnbc9h0?si=Ra6L8kYtJqYvCWFE"
+                  title="Video Promosi Martabak Manja"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p class="mm-youtube-note">
+                *Ganti <code>VIDEO_ID_ANDA</code> pada kode di atas dengan ID video YouTube channel Anda.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="mm-footer">
+      <div class="crimp-divider to-cocoa flip" aria-hidden="true"></div>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <h3 class="mm-footer-brand">Martabak <span style="color: var(--gold-400)">Manja</span></h3>
+            <p class="mm-footer-text">
+              Martabak Manis &amp; Martabak Telor kekinian, dipanggang segar setiap hari
+              dengan resep rumahan yang bikin manja lidah.
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <h4 class="mm-footer-heading">Navigasi</h4>
+            <ul class="mm-footer-links">
+              <li><a href="#beranda">Beranda</a></li>
+              <li><a href="#produk">Menu / Produk</a></li>
+              <li><a href="#transaksi">Cara Transaksi</a></li>
+              <li><a href="#kontak">Kontak</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-sm-6">
+            <h4 class="mm-footer-heading">Ikuti Kami</h4>
+            <ul class="mm-footer-links">
+              <li><a href="https://instagram.com/martabakmanja" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              <li><a href="https://tiktok.com/@martabakmanja" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+              <li><a href="https://facebook.com/martabakmanja" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <h4 class="mm-footer-heading">Kontak</h4>
+            <ul class="mm-footer-links">
+              <li>0831-8236-6219</li>
+              <li>halo@martabakmanja.id</li>
+              <li>Semarang, Jawa Tengah</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mm-footer-bottom">
+          <p>© <span id="mmFooterYear"></span> Martabak Manja. Seluruh hak cipta dilindungi.</p>
+          <p class="mm-footer-credit">
+            Dibuat oleh <strong>[Raihan Akram Junaidi]</strong> — NIM <strong>[25.240.0048]</strong>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============================ CART OFFCANVAS ============================ -->
+    <div class="offcanvas offcanvas-end mm-cart-offcanvas" id="mmCartOffcanvas" tabindex="-1" aria-hidden="true">
+      <div class="offcanvas-header mm-cart-header">
+        <h5 class="offcanvas-title">Keranjang Belanja</h5>
+        <button type="button" class="btn-close btn-close-white" id="mmCartCloseBtn" aria-label="Tutup keranjang"></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column" id="mmCartBody"></div>
+    </div>
+    <div class="offcanvas-backdrop d-none" id="mmCartBackdrop"></div>
+
+    <!-- ============================ QRIS MODAL ============================ -->
+    <div class="modal fade mm-qris-modal" id="mmQrisModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content mm-qris-content">
+          <div id="mmQrisPayView">
+            <div class="modal-header mm-qris-header">
+              <h5 class="modal-title">Simulasi Pembayaran QRIS</h5>
+              <button type="button" class="btn-close btn-close-white" id="mmQrisCloseBtn" aria-label="Tutup"></button>
+            </div>
+            <div class="modal-body text-center">
+              <p class="mb-1 text-muted" id="mmQrisTotalItems">Total tagihan (0 item)</p>
+              <h3 class="mm-qris-total" id="mmQrisTotalPrice">Rp0</h3>
+
+              <div class="mm-qris-code mx-auto my-3">
+                <img src="assets/img/qris1.jpg" alt="Kode QRIS pembayaran Martabak Manja" />
+              </div>
+
+              <ol class="mm-qris-steps text-start">
+                <li>Buka aplikasi e-wallet / mobile banking apa saja yang mendukung QRIS.</li>
+                <li>Pilih menu <strong>Scan QR</strong>, lalu arahkan kamera ke kode di atas.</li>
+                <li>Periksa nominal, nama merchant <strong>Martabak Manja</strong>, lalu konfirmasi bayar.</li>
+                <li>Simpan bukti pembayaran sebagai referensi pengambilan pesanan.</li>
+              </ol>
+
+              <button class="btn-brand w-100 mt-2" id="mmQrisConfirmBtn">Saya Sudah Membayar</button>
+            </div>
+          </div>
+
+          <div id="mmQrisSuccessView" class="modal-body text-center mm-qris-success d-none">
+            <div class="mm-success-icon">✓</div>
+            <h4 class="mt-3">Pembayaran Berhasil Disimulasikan!</h4>
+            <p class="text-muted">
+              Terima kasih telah memesan di Martabak Manja. Pesanan Anda akan segera diproses
+              dan diantar oleh kurir kami.
+            </p>
+            <button class="btn-brand w-100 mt-2" id="mmQrisDoneBtn">Kembali ke Beranda</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-backdrop fade d-none" id="mmQrisBackdrop"></div>
+
+    <!-- ============================ SCRIPTS ============================ -->
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
